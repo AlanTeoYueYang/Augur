@@ -234,6 +234,9 @@ calculate_auc = function(input,
   cell_types = meta[[cell_type_col]]
   labels = meta[[label_col]]
 
+  message(labels)
+  message('here is fine..')
+
   # check dimensions are non-zero
   if (length(dim(expr)) != 2 || !all(dim(expr) > 0)) {
     stop("expression matrix has at least one dimension of size zero")
