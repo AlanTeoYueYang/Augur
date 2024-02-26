@@ -233,9 +233,8 @@ calculate_auc = function(input,
     labels = meta[[label_col]]
   }
 
-  message(labels)
-  message('here is fine..')
-
+  message('test here')
+  mesage(labels)
   # check dimensions are non-zero
   if (length(dim(expr)) != 2 || !all(dim(expr) > 0)) {
     stop("expression matrix has at least one dimension of size zero")
@@ -307,6 +306,8 @@ calculate_auc = function(input,
       stop("multi-class classification with classifier = 'lr' is currently not ",
            "supported in tidymodels `logistic_reg`")
     }
+
+    # make sure y is a factor if doing classification
     if (!is.factor(labels)) {
       warning("coercing labels to factor ...")
       labels %<>% as.factor()
