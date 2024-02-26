@@ -234,7 +234,7 @@ calculate_auc = function(input,
   }
 
   message('test here')
-  mesage(labels)
+  mesasge(labels)
   # check dimensions are non-zero
   if (length(dim(expr)) != 2 || !all(dim(expr) > 0)) {
     stop("expression matrix has at least one dimension of size zero")
